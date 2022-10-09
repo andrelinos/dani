@@ -15,7 +15,11 @@ export function Cards({
   ...rest
 }: CardsProps) {
   return (
-    <div className="relative p-6 border border-brand-gray-100 rounded-lg">
+    <div
+      className="relative p-6 border border-brand-gray-100 rounded-lg
+      hover:border-brand-pink-300 transition-all duration-500 hover:cursor-default
+      hover:bg-brand-purple-600 hover:bg-opacity-20"
+    >
       <div className="absolute -top-14 left-0 right-0 flex text-6xl justify-center">
         <div
           className="flex w-24 h-24 bg-brand-pink-300 rounded-full justify-center items-center
