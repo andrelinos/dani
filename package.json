@@ -10,9 +10,6 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@vime/core": "^5.3.3",
-    "@vime/react": "^5.3.3",
-    "@vime/vue-next": "^5.3.3",
     "classnames": "^2.3.1",
     "next": "12.3.1",
     "phosphor-react": "^1.4.1",

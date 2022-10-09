@@ -21,13 +21,15 @@ export function AboutInvestment() {
         >
           O valor do seu investimento será de apenas
         </h2>
-        <h1
-          className="text-6xl md:text-8xl text-center lg:text-left
+        <div className="flex">
+          <h1
+            className="text-6xl md:text-8xl text-center lg:text-left
           text-brand-red-500 md:mt-8"
-        >
-          R$ 540,00
-        </h1>
-        <span className="flex items-end pb-2 pl-1">à vista</span>
+          >
+            R$ 540,00
+          </h1>
+          <span className="flex items-end pb-2 pl-1">à vista</span>
+        </div>
       </div>
       <p className="text-center p-2">Ou em até 12x</p>
       <ButtonBuy />
