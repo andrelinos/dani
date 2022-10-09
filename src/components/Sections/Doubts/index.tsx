@@ -12,7 +12,7 @@ import { ButtonBuy } from '~/components/ButtonBuy';
 
 export function Doubts() {
   return (
-    <section id="me" className="">
+    <section id="doubts" className="">
       <div className="mb-24">
         <h1
           className="font-bold text-4xl md:text-6xl text-center lg:text-left

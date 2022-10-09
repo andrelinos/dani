@@ -1,18 +1,26 @@
 export const menus = {
   top: [
-    { title: 'Home', url: '/' },
-    { title: 'Sobre mim', url: '#' },
+    { title: 'Home', url: '#header' },
+    { title: 'Sobre mim', url: '#about' },
     { title: 'Cursos', url: '#' },
-    { title: 'Projetos', url: '#' },
-    { title: 'Contato', url: '#' },
+    { title: 'Conteúdo', url: '#doubts' },
+    {
+      title: 'Contato',
+      url: 'https://www.linkedin.com/in/danieleleaoevangelista',
+      ext: true,
+    },
     { title: 'FAQ', url: '/faq' },
   ],
   footer: [
-    { title: 'Home', url: '/' },
-    { title: 'Sobre mim', url: '#' },
+    { title: 'Home', url: '#header' },
+    { title: 'Sobre mim', url: '#about' },
     { title: 'Cursos', url: '#' },
-    { title: 'Conteúdo', url: '#' },
-    { title: 'Contato', url: '#' },
+    { title: 'Conteúdo', url: '#doubts' },
+    {
+      title: 'Contato',
+      url: 'https://www.linkedin.com/in/danieleleaoevangelista',
+      ext: true,
+    },
     { title: 'FAQ', url: '/faq' },
   ],
 };

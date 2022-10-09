@@ -4,7 +4,7 @@ import Image from 'next/future/image';
 /* eslint-disable react/no-unescaped-entities */
 export function AboutCourse() {
   return (
-    <section id="me" className="flex w-full text-brand-gray-100">
+    <section id="about" className="flex w-full text-brand-gray-100">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div className="order-1 lg:order-2 lg:self-center">
           <h1

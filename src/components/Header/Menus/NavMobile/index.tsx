@@ -1,3 +1,4 @@
+/* eslint-disable no-confusing-arrow */
 import { useState } from 'react';
 
 import classNames from 'classnames';
@@ -9,6 +10,7 @@ import { menus } from '~/pages/api/menus';
 interface Props {
   title: string;
   url: string;
+  ext?: boolean;
 }
 
 export function NavMobile() {
@@ -46,15 +48,21 @@ export function NavMobile() {
             )}
           >
             <div className="flex w-full p-20 mt-16 flex-col items-center">
-              {menus?.top?.map((menu: Props) => (
-                <Link
-                  key={menu?.title}
-                  className="p-3 text-brand-gray-100 hover:text-brand-purple-300"
-                  href={menu?.url}
-                >
-                  {menu?.title}
-                </Link>
-              ))}
+              {menus?.top?.map((menu: Props) =>
+                menu.ext ? (
+                  <a key={menu?.title} href={menu?.url}>
+                    <span className="p-3 text-brand-gray-100 hover:text-brand-purple-300">
+                      {menu?.title}
+                    </span>
+                  </a>
+                ) : (
+                  <Link key={menu?.title} href={menu?.url}>
+                    <span className="p-3 text-brand-gray-100 hover:text-brand-purple-300">
+                      {menu?.title}
+                    </span>
+                  </Link>
+                ),
+              )}
             </div>
           </div>
         </div>

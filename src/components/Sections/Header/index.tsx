@@ -3,7 +3,7 @@ import Image from 'next/future/image';
 export function Header() {
   return (
     <section
-      id="#header"
+      id="header"
       className="flex relative img-opacity w-full justify-center items-center lg:py-40
            flex-col"
     >

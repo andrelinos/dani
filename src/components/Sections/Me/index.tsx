@@ -3,7 +3,7 @@ import Image from 'next/future/image';
 /* eslint-disable react/no-unescaped-entities */
 export function Me() {
   return (
-    <section id="me" className="text-brand-gray-100">
+    <section id="about" className="text-brand-gray-100">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div className="order-2 lg:order-1 lg:self-center">
           <h1
