@@ -37,7 +37,7 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: transparent;
+  @apply bg-bg-gradient;
 }
 
 body::-webkit-scrollbar-thumb {
@@ -53,13 +53,9 @@ body::-webkit-scrollbar-thumb {
   right: 0px;
   bottom: 0px;
   left: 0px;
-
-  /* Specify the background image to be used */
   background-image: url('/assets/images/nodejs.png');
   background-size: cover;
   background-position: 0% 50%;
   background-repeat: no-repeat;
-
-  /* Specify the background image */
   opacity: 0.12;
 }

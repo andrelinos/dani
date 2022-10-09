@@ -6,10 +6,13 @@ export function Me() {
     <section id="me" className="text-brand-gray-100">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div className="order-2 lg:order-1 lg:self-center">
-          <h1 className="font-bold text-6xl text-center lg:text-left text-brand-red-500 mt-8">
-            SOBRE MIM
+          <h1
+            className="font-bold text-4xl md:text-6xl text-center lg:text-left
+          text-brand-red-500 md:mt-8"
+          >
+            COM QUEM VOCÊ VAI APRENDER
           </h1>
-          <p className="text-xs text-center lg:text-left">
+          <p className="text-md text-center lg:text-left text-gray-500">
             Conheça um pouco da minha história
           </p>
           <div className="flex flex-col text-lg leading-6 py-8 gap-8 text-center lg:text-left">
@@ -39,13 +42,19 @@ export function Me() {
           </div>
         </div>
         <div className="order-1 lg:order-2 lg:self-center flex justify-center items-center grid-row-span-1">
-          <Image
-            className="opacity-30"
-            width={740}
-            height={600}
-            src="/assets/images/danisf.png"
-            alt="Daniele Leão"
-          />
+          <div
+            className="md:w-96 md:h-96 rounded-full overflow-hidden contain md:border
+             border-brand-red-500 p-4 lg:bg-gray-900 hover:scale-105 transition-all
+             duration-500"
+          >
+            <Image
+              className="flex w-full opacity-40 mt-20 z-10 hover:opacity-75 transition-all duration-500"
+              width={741}
+              height={640}
+              src="/assets/images/danisf.png"
+              alt="Daniele Leão"
+            />
+          </div>
         </div>
       </div>
     </section>

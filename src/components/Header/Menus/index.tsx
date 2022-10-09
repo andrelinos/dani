@@ -4,7 +4,7 @@ import { NavWeb } from './NavWeb';
 export function Menus() {
   return (
     <div className="flex">
-      <title>Premium Social Service</title>
+      <title>Daniele Leão</title>
       <NavWeb />
       <NavMobile />
     </div>

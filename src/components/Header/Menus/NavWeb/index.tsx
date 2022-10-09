@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import { menus } from '~/pages/api/menus';
 
 interface Props {
@@ -13,16 +15,19 @@ export function NavWeb() {
           <img src="./assets/images/logo.svg" alt="" />
         </span>
         <div>
-          <div className="flex gap-4 font-medium">
-            {menus?.map((menu: Props) => (
-              <a
-                key={menu.title}
-                className="p-1 text-brand-gray-100 hover:text-brand-purple-300
+          <div
+            className="flex gap-4 font-medium text-brand-gray-100
                 transition-all"
-                href={menu.url}
-              >
-                {menu.title}
-              </a>
+          >
+            {menus?.top?.map((menu: Props) => (
+              <Link key={menu.title} href={menu.url}>
+                <span
+                  className="p-1 block text-brand-gray-100 hover:text-brand-purple-300
+                transition-all cursor-pointer"
+                >
+                  {menu.title}
+                </span>
+              </Link>
             ))}
           </div>
         </div>

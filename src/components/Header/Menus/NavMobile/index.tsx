@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import classNames from 'classnames';
+import Link from 'next/link';
 import { List, X } from 'phosphor-react';
 
 import { menus } from '~/pages/api/menus';
@@ -37,22 +38,22 @@ export function NavMobile() {
           <div
             className={classNames(
               `absolute top-0 left-0 right-0 bottom-0 w-full h-full bg-brand-gray-900
-              text-xl font-medium gap-6 z-20 bg-opacity-70`,
+              text-2xl font-medium gap-6 z-20 bg-opacity-90`,
               {
                 'flex ': showMenu,
                 'hidden ': !showMenu,
               },
             )}
           >
-            <div className="flex w-full p-8 flex-col items-center">
-              {menus?.map((menu: Props) => (
-                <a
+            <div className="flex w-full p-20 mt-16 flex-col items-center">
+              {menus?.top?.map((menu: Props) => (
+                <Link
                   key={menu?.title}
                   className="p-3 text-brand-gray-100 hover:text-brand-purple-300"
                   href={menu?.url}
                 >
                   {menu?.title}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
