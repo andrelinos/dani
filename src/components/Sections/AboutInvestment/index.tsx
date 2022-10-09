@@ -10,14 +10,14 @@ export function AboutInvestment() {
         >
           QUAL SERÁ O INVESTIMENTO?
         </h1>
-        <p className="text-md text-center lg:text-left text-gray-500">
+        <p className="text-md text-center lg:text-left text-gray-500 uppercase">
           Invista em sua carreira na tecnologia agora mesmo!
         </p>
       </div>
       <div className="flex items-center flex-col ">
         <h2
           className="text-2xl md:text-4xl text-center lg:text-left
-          text-brand-gray-100 md:mt-8"
+          text-brand-gray-100 md:mt-8 "
         >
           O valor do seu investimento será de apenas
         </h2>

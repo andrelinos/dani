@@ -20,7 +20,7 @@ export function Doubts() {
         >
           O QUE IREI APRENDER?
         </h1>
-        <p className="text-md text-center lg:text-left text-gray-500">
+        <p className="text-md text-center lg:text-left text-gray-500 uppercase">
           Aprenda com quem entende do assunto
         </p>
       </div>

@@ -13,7 +13,7 @@ export function AboutCourse() {
           >
             SOBRE O CURSO
           </h1>
-          <p className="text-md text-center lg:text-left text-gray-500">
+          <p className="text-md text-center lg:text-left text-gray-500 uppercase">
             Conteúdo com a melhor qualidade
           </p>
           <div className="flex flex-col text-lg leading-6 py-8 gap-8 text-center lg:text-justify">

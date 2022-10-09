@@ -12,10 +12,10 @@ export function Me() {
           >
             COM QUEM VOCÊ VAI APRENDER
           </h1>
-          <p className="text-md text-center lg:text-left text-gray-500">
+          <p className="text-md text-center lg:text-left text-gray-500 uppercase">
             Conheça um pouco da minha história
           </p>
-          <div className="flex flex-col text-lg leading-6 py-8 gap-8 text-center lg:text-left">
+          <div className="flex flex-col text-lg leading-6 py-8 gap-8 text-center md:text-justify">
             <p>
               Oi galerinha tudo bem? Pra quem não me conhece, eu sou a Dani, sou
               programadora há mais de 13 anos com extenso conhecimento em
