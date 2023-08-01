@@ -1,8 +1,9 @@
+/* eslint-disable react/jsx-curly-newline */
 /* eslint-disable no-confusing-arrow */
 import { useState } from 'react';
 
 import classNames from 'classnames';
-import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { List, X } from 'phosphor-react';
 
 import { menus } from '~/pages/api/menus';
@@ -13,8 +14,25 @@ interface Props {
   ext?: boolean;
 }
 
+interface NavigateProps {
+  url: string;
+  ext: boolean | undefined;
+}
+
 export function NavMobile() {
+  const router = useRouter();
+
   const [showMenu, setShowMenu] = useState(false);
+
+  function handleNavigate({ url, ext }: NavigateProps) {
+    setShowMenu(false);
+
+    if (ext) {
+      window.open(url);
+    } else {
+      router.replace(`/${url}`);
+    }
+  }
 
   return (
     <div className="flex lg:hidden w-full items-center flex-col">
@@ -48,21 +66,19 @@ export function NavMobile() {
             )}
           >
             <div className="flex w-full p-20 mt-16 flex-col items-center">
-              {menus?.top?.map((menu: Props) =>
-                menu.ext ? (
-                  <a key={menu?.title} href={menu?.url}>
-                    <span className="p-3 text-brand-gray-100 hover:text-brand-purple-300">
-                      {menu?.title}
-                    </span>
-                  </a>
-                ) : (
-                  <Link key={menu?.title} href={menu?.url}>
-                    <span className="p-3 text-brand-gray-100 hover:text-brand-purple-300">
-                      {menu?.title}
-                    </span>
-                  </Link>
-                ),
-              )}
+              {menus?.top?.map((menu: Props, index: number) => (
+                <button
+                  type="button"
+                  key={`${menu?.title}-${index}`}
+                  onClick={() =>
+                    handleNavigate({ url: menu?.url, ext: menu?.ext })
+                  }
+                >
+                  <span className="p-3 text-brand-gray-100 hover:text-brand-purple-300">
+                    {menu?.title}
+                  </span>
+                </button>
+              ))}
             </div>
           </div>
         </div>
